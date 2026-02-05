@@ -9,3 +9,8 @@ use Illuminate\Support\Facades\Route;
 // })->middleware('auth:sanctum');
 
 Route::get('/product',[ProductController::class, 'index']);
+Route::post('/product',[ProductController::class, 'store']);
+
+Route::get('/product/{id}', [ProductController::class,'GetById']);
+Route::delete('/product/{id}', [ProductController::class,'destroy']);
+Route::POST('/product/{id}', [ProductController::class,'update']);
